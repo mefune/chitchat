@@ -9,7 +9,9 @@
 ## General Notes
 - The project uses Go's new dependency management system.
 - For details, see https://blog.golang.org/using-go-modules 
-
+- This walkthrough uses the general approach outlined in:     
+    - https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment
+    - https://devcenter.heroku.com/articles/getting-started-with-go?singlepage=true
 
 ---
 
@@ -67,10 +69,31 @@ Heroku also provides a `pg` command that shows a lot more:
 
 
 #### Git it on up:
+- Note this will be the general flow for working with Git now that we have Heroku remote as well.
 
 ```sh
+git status
+git add --all
+git commit -a  -m 'Initial launch'
+git push heroku master
 
+# Push to GitHub as well:
+git push origin master
 ```
+
+---
+
+### Run your app:
+
+As a handy shortcut, you can open the website as follows:
+- `heroku open`
+
+View information about your running app:
+- `heroku logs --tail`
+
+
+
+
 
 
 ---
