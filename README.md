@@ -72,6 +72,9 @@ Heroku also provides a `pg` command that shows a lot more:
 - Note this will be the general flow for working with Git now that we have Heroku remote as well.
 
 ```sh
+go mod tidy
+go mod vendor
+
 git status
 git add --all
 git commit -a  -m 'Initial launch'
@@ -83,7 +86,7 @@ git push origin master
 
 ---
 
-### Run your app:
+### Run your app on **Heroku**:
 
 As a handy shortcut, you can open the website as follows:
 - `heroku open`
@@ -93,12 +96,42 @@ View information about your running app:
 
 
 
+--- 
+
+## Run the app locally:
+
+### Build package:
+- See https://golang.org/cmd/go/#hdr-Compile_packages_and_dependencies
+
+```sh
+go build -o bin/chitchat -v .
+```
+
+- Start your app locally using the `heroku local` command.
+    - This is installed as part of the Heroku CLI.
+    - Just like Heroku, it examines the `Procfile` to determine what to run.
+
+```sh
+heroku local web
+```
+
+- Open http://localhost:8080 with your web browser. 
+- To stop the app from running locally, go back to your terminal window and press `Ctrl+C` to exit.
+
+
+
+
+
 
 
 
 ---
 NOT NEEDED YET:
 
-#### STep ???:
-- Set your config variables on Heroku
+#### Step ???:
+ 
+
+- Set your config variables on Heroku.
+- Note, `$PORT` is automatically set by Heroku on web dynos - so don't set that one.
+
 `heroku config:set REPEAT=10`
