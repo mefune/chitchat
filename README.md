@@ -129,6 +129,57 @@ heroku local web
 
 
 
+---
+
+## Setting Up A Custom Domain For Your Heroku-Hosted App
+
+Note the glossary:
+- https://devcenter.heroku.com/articles/custom-domains#domain-name-glossary
+
+Approach taken here is based on:
+- https://devcenter.heroku.com/articles/custom-domains
+- https://medium.com/@ethanryan/setting-up-a-custom-domain-for-your-heroku-hosted-app-6c011e75aa3d
+
+#### Step 1:
+- Buy a custom domain name (I used name.com)
+- Example used below is for domain `b7forum.com`
+
+#### Step 2:
+
+```sh
+heroku domains:add www.b7forum.com
+
+heroku domains:wait 'www.b7forum.com' 
+```
+
+Note the output; configure your app's DNS provider to point to the DNS Target:
+- `integrative-kiwi-i8a0bariil1ahajauz37x4n6.herokudns.com`
+
+
+#### Step 3: Add a custom root domain.
+
+```sh
+heroku domains:add b7forum.com
+
+heroku domains:wait 'b7forum.com' 
+```
+
+Note the output, configure your app's DNS provider to point to the DNS Target:
+- `still-sprout-wdcdz1tpzkyitakes8rs9x7z.herokudns.com`
+
+
+
+#### Step 4:
+- Add the DNS Records in name.com (or whatever site you bought your domain on).
+
+![](docs/dns.png)
+
+
+#### Step 5:
+View existing domains:
+- `heroku domains`
+
+... Now wait a few minutes ...
 
 
 
