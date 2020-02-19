@@ -6,12 +6,19 @@
 - Heroku account
 - pgAdmin4
 
+
 ## General Notes
 - The project uses Go's new dependency management system.
 - For details, see https://blog.golang.org/using-go-modules 
 - This walkthrough uses the general approach outlined in:     
     - https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment
     - https://devcenter.heroku.com/articles/getting-started-with-go?singlepage=true
+
+
+## Further reading to enhance the app:
+- https://devcenter.heroku.com/categories/go-support
+- https://devcenter.heroku.com/articles/oauth2-heroku-go
+- https://elements.heroku.com/addons
 
 ---
 
