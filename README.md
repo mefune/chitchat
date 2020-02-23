@@ -3,8 +3,17 @@
 
 
 ## Prerequisites
-- Heroku account
-- pgAdmin4
+
+1. Create an account on **Heroku**
+
+2. Install **Heroku CLI** 
+    - https://devcenter.heroku.com/articles/heroku-cli
+
+3. Set up **pgAdmin4**
+    - Forget it; this tool is uggggh - just go with **DataGrip** instead.
+
+
+---    
 
 
 ## General Notes
