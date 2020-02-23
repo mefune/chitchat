@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/Ylazerson/chitchat/data"
+	"github.com/mefune/chitchat/data"
 )
 
 // GET /threads/new

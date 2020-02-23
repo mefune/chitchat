@@ -1,4 +1,4 @@
-module github.com/Ylazerson/chitchat
+module github.com/mefune/chitchat
 
 go 1.12
 
